@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="main.js"></script>
+
+  <style type="text/css">
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+
+    @font-face {
+      font-family: Adieu;
+      src: url(Adieu-Regular.otf);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+      font-size: 100%;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #09544F;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    } 
+
+    img {
+      width: 100%
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .main {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 800px;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .text-box {
+      padding: 0px 0px 36px;
+    }
+
+    .text-box p:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .ok-button {
+      display: block;
+      padding: 16px 20px 16px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      background-color: #f04923;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .ok-button:hover {
+      opacity: .9;
+    }
+
+    .left-direction {
+      direction: ltr;
+      text-align: left;
+    } 
+
+    .right-direction {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .display_none {
+      display: none;
+    }
+
+    .push_close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+  
+  </style>
+
+</head>
+
+<body>
+
+  <div class="main">
+
+    <div class="push_close display_none">
+      <a href="pushwoosh://close">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="15px" height="15px" viewbox="0 0 357 357">
+          <polygon
+            points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"
+            fill="#09544F" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="first-screen">
+
+      <div class="cake-box">
+        <img class="cake" src="https://i.imgur.com/9UEBdk5.png" alt="cake">
+      </div>
+
+      <div class="plate">
+
+        <div class="heading left-direction">
+          Wanna find out about new promo?
+        </div>
+        <ul class="first-screen-text left-direction">
+          <li><span>Solve a jigsaw puzzle in 90 seconds.</span></li>
+          <li><span>Tap on the puzzle pieces to rotate and drag them to fit a picture.</span></li>
+        </ul>
+        <div class="btn-box left-direction">
+          <a class="ok-button start-btn" href="#">Let’s play</a>
+        </div>
+
+      </div>
+     
+    </div>
+
+    <div class="game display_none">
+      <div class="game-top">
+        <div class="timer-box">
+          <img class="clock clock-yellow" src="https://i.imgur.com/OyLF2hl.png" alt="clock">
+          <img class="clock clock-red  display_none" src="https://i.imgur.com/0VYANTp.png" alt="clock">
+
+          <div class="timer"></div>
+        </div>
+      </div>
+    
+      <div class="game-box">
+        <div class="field">
+          <div class="background"></div>
+          <div class="grid">
+            <div class="place place-1"></div>
+            <div class="place place-2"></div>
+            <div class="place place-3"></div>
+            <div class="place place-4"></div>
+            <div class="place place-5"></div>
+            <div class="place place-6"></div>
+            <div class="place place-7"></div>
+            <div class="place place-8"></div>
+            <div class="place place-9"></div>
+            <div class="place place-10"></div>
+            <div class="place place-11"></div>
+            <div class="place place-12"></div>
+            <div class="place place-13"></div>
+            <div class="place place-14"></div>
+            <div class="place place-15"></div>
+            <div class="place place-16"></div>
+          </div>
+        </div>
+        <div class="piece piece-7" data-angle-start="90" data-angle="90" data-top="17" data-left="33"></div>
+        <div class="piece piece-3" data-angle-start="180" data-angle="180" data-top="78" data-left="4"></div>
+        <div class="piece piece-1" data-angle-start="270" data-angle="270" data-top="20" data-left="71"></div>
+        <div class="piece piece-5" data-angle-start="90" data-angle="90" data-top="84" data-left="27"></div>
+        <div class="piece piece-16" data-angle-start="180" data-angle="180" data-top="18" data-left="50"></div>
+        <div class="piece piece-11" data-angle-start="270" data-angle="270" data-top="60" data-left="78"></div>
+        <div class="piece piece-13" data-angle-start="0" data-angle="0" data-top="26" data-left="5"></div>
+        <div class="piece piece-15" data-angle-start="90" data-angle="90" data-top="81" data-left="67"></div>
+        <div class="piece piece-4" data-angle-start="180" data-angle="180" data-top="41" data-left="10"></div>
+        <div class="piece piece-12" data-angle-start="270" data-angle="270" data-top="65" data-left="7"></div>
+        <div class="piece piece-14" data-angle-start="90" data-angle="90" data-top="43" data-left="77"></div>
+        <div class="piece piece-10" data-angle-start="180" data-angle="180" data-top="50" data-left="1"></div>
+        <div class="piece piece-8" data-angle-start="270" data-angle="270" data-top="18" data-left="15"></div>
+        <div class="piece piece-6" data-angle-start="0" data-angle="0" data-top="85" data-left="45"></div>
+        <div class="piece piece-9" data-angle-start="90" data-angle="90" data-top="34" data-left="70"></div>
+        <div class="piece piece-2" data-angle-start="180" data-angle="180" data-top="72" data-left="68"></div>      
+      </div>  
+    </div>
+
+    <div class="gif-box display_none">
+      <img class="gif gif-fail display_none" src="https://i.imgur.com/pgA5jns.png" alt="gif">
+      <img class="gif gif-success display_none" src="https://i.imgur.com/6PBvjJo.gif" alt="gif">
+    </div>
+
+    <div class="fog display_none">
+
+    </div>
+
+    <div class="last-screen display_none">
+      <div class="pop-up">
+        
+        <div class="cream">
+          <div class="smile-box">
+            <img class="smile-fail display_none" src="https://i.imgur.com/E1Ucd7W.png" alt="fail">
+            <img class="smile-success display_none" src="https://i.imgur.com/YZ3zDGr.png" alt="fail">
+          </div>
+          <div class="cream-text-box left-direction">
+            <p class="cream-text cream-text-fail display_none ">Oops!</p> 
+            <p class="cream-text cream-text-success display_none">Well done!</p> 
+          </div>         
+        </div>
+
+        <div class="pop-up-content pop-up-content-fail display_none">
+          <div class="text-box left-direction">
+            <p>
+              Time’s up, but don’t get upset.
+            </p>
+            <p>
+              Let’s solve the puzzle again.
+            </p>
+          </div>
+          <div class="btn-box left-direction">
+            <a class="ok-button try-again-fail pop-up-btn" href="#">Try again</a>
+          </div>
+          <a class="to-promo left-direction" href="">Skip to promo</a>
+        </div>
+
+        <div class="pop-up-content pop-up-content-success display_none">
+          <div class="text-box text-box-success left-direction">
+            <p>
+              You’re now invited to join FBS Birthday Party.
+            </p>
+            <p>
+              Trade and earn tickets for a guaranteed gift and a chance to win a Tesla Model 3, a Jaguar F-Type, the latest Apple or Samsung products, and more!
+            </p>
+            <p>
+              &#128276;&nbsp;Note: if you can’t see the promo, update the app to the latest version.
+            </p>
+          </div>
+          <div class="btn-box left-direction">
+            <a class="ok-button to-promo pop-up-btn" href="#">Join promo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+
+  <script>
+    document.querySelector('.cake-box').style.bottom = `${document.querySelector('.plate').offsetHeight - 10}px`;
+  </script>
+
+</body>
+</html>

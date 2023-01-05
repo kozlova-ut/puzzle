@@ -1,0 +1,438 @@
+.first-screen {
+    position: relative;
+    height: 100vh;
+    background: url(https://i.imgur.com/WNmKwCY.png) no-repeat;
+    background-size: contain;
+}
+
+.first-screen-text {
+    padding: 18px 27px 32px;
+    color: #00BE40;
+}
+
+.first-screen-text li:first-child {
+    margin-bottom: 8px;
+}
+
+.first-screen-text span {
+    font-size: 16px;
+    color: #09544F;
+}
+
+.heading {
+    font-family: 'Adieu', 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 33px;
+    color: #09544F;
+}
+
+.plate {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 50%;
+    padding: 46px 24px 60px;
+    background: #ffffff;
+    border-radius: 35px 35px 0 0;
+    box-shadow: 0px -20px 40px rgba(29, 117, 131, 0.15);
+}
+
+.cake {
+    height: 251px;
+    width: 300px;
+    animation: cake 6s ease-in-out infinite;
+}
+
+.cake-box {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.background {
+    position: absolute;
+    z-index: 0;
+    width: 320px;
+    height: 320px;
+    background-image: url(https://i.imgur.com/shlAbTx.png);
+    background-size: contain;
+    opacity: 0.2;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DFF9F7 100%);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
+}
+
+.field {
+    background: #ffffff;
+}
+
+.place {
+    position: relative;
+    flex-shrink: 0;
+    width: 80px;
+}
+
+.piece {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    touch-action: none;
+}
+
+.piece-1 {
+    background-image: url(https://i.imgur.com/cSaGqOc.png);
+    background-size: contain;
+}
+
+.piece-2 {
+    background-image: url(https://i.imgur.com/wBbkfxB.png);
+    background-size: contain;
+}
+
+.piece-3 {
+    background-image: url(https://i.imgur.com/x67xGqu.png);
+    background-size: contain;
+}
+
+.piece-4 {
+    background-image: url(https://i.imgur.com/VevIBsB.png);
+    background-size: contain;
+}
+
+.piece-5 {
+    background-image: url(https://i.imgur.com/7MmnbTR.png);
+    background-size: contain;
+}
+
+.piece-6 {
+    background-image: url(https://i.imgur.com/ewLSGbD.png);
+    background-size: contain;
+}
+
+.piece-7 {
+    background-image: url(https://i.imgur.com/lgGeWJf.png);
+    background-size: contain;
+}
+
+.piece-8 {
+    background-image: url(https://i.imgur.com/nDEBMrQ.png);
+    background-size: contain;
+}
+
+.piece-9 {
+    background-image: url(https://i.imgur.com/zP1VM65.png);
+    background-size: contain;
+}
+
+.piece-10 {
+    background-image: url(https://i.imgur.com/ImAuMQg.png);
+    background-size: contain;
+}
+
+.piece-11 {
+    background-image: url(https://i.imgur.com/zLCjFHF.png);
+    background-size: contain;
+}
+
+.piece-12 {
+    background-image: url(https://i.imgur.com/CZ7zXmY.png);
+    background-size: contain;
+}
+
+.piece-13 {
+    background-image: url(https://i.imgur.com/IyTUJHG.png);
+    background-size: contain;
+}
+
+.piece-14 {
+    background-image: url(https://i.imgur.com/CmGyXDW.png);
+    background-size: contain;
+}
+
+.piece-15 {
+    background-image: url(https://i.imgur.com/SE9bwwl.png);
+    background-size: contain;
+}
+
+.piece-16 {
+    background-image: url(https://i.imgur.com/1u1hLxF.png);
+    background-size: contain;
+}
+
+.timer {
+    padding: 18px 36px 0px;
+    width: 132px;
+    height: 70px;
+    text-align: right;
+    font-family: 'Adieu', 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #09544F;
+    background: url(https://i.imgur.com/XVcMVgD.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-top {
+    width: 100%;
+    padding: 0px 25px;
+}
+
+.timer-box {
+    align-self: left;
+    position: relative;
+    margin-top: 30px;
+}
+
+.clock {
+    width: 60px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.clock-red {
+    animation: clock 0.8s linear infinite;
+}
+
+.game-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    padding-top: 110px;
+}
+
+.gif-box {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gif {
+    height: 320px;
+    width: 320px;
+}
+
+.gif-fail {
+    animation: gif-fail 5s linear;
+    box-shadow: 0 0 30px #FF1800;
+}
+
+.gif-success {
+    animation: gif-success 6s linear;
+    box-shadow: 0 0 30px #0ABE35;
+}
+
+.fog {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    background: rgba(35, 72, 80, 0.3);
+    backdrop-filter: blur(3px);
+    animation: fog 0.3s ease-in;
+}
+
+.last-screen {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.pop-up {
+    margin: 0 auto;
+    z-index: 5000;
+    width: 100%;
+    max-width: 320px;
+    min-height: 300px;
+    box-shadow: 0px 20px 40px rgba(32, 83, 91, 0.2);
+    border-radius: 35px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.cream {
+    position: relative;
+    height: 135px;
+    padding: 30px 0 0;
+    text-align: center;
+    background: url(https://i.imgur.com/dNMDPuz.png) no-repeat;
+    background-size: contain;
+    border-radius: 35px 35px 0 0;
+}
+
+.smile-box {
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    position: absolute;
+    top: -60px;
+    text-align: center;
+}
+
+.smile-fail,
+.smile-success {
+    width: 80px;
+}
+
+.cream-text {
+    font-family: 'Adieu', 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #09544F; 
+}
+
+.cream-text-box {
+    display: inline-block;
+    background: #C4EDE8;
+}
+
+.pop-up-content {
+    padding: 0 20px;
+    margin: 25px 0;
+}
+
+.try-again-fail {
+    margin-bottom: 21px;
+}
+
+.to-promo {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #F04923;
+}
+
+.text-box-success {
+    text-align: left;
+}
+
+
+@media (max-height: 600px) {
+    .cake {
+        width: 250px;
+        height: 209px;
+    }
+
+    .heading {
+    font-size: 24px;
+    line-height: 30px;
+    }
+}
+
+@keyframes cake {
+    0% {
+        transform: translateY(0); 
+    }
+    60% {
+        transform: translateY(12px) translateX(-5px) rotate(7deg); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+@keyframes clock {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(1px) translateY(-4px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes gif-fail {
+    0% {
+        box-shadow: 0 0 0px #FF1800;
+    }
+    14% {
+        box-shadow: 0 0 40px #FF1800;        
+    }
+    28% {
+        box-shadow: 0 0 15px #FF1800;        
+    }
+    42% {
+        box-shadow: 0 0 30px #FF1800;        
+    }
+    56% {
+        box-shadow: 0 0 15px #FF1800;        
+    }
+    70% {
+        box-shadow: 0 0 30px #FF1800;        
+    }
+    84% {
+        box-shadow: 0 0 15px #FF1800;        
+    }
+    100% {
+        box-shadow: 0 0 30px #FF1800;        
+    }
+}
+
+@keyframes gif-success {
+    0% {
+        box-shadow: 0 0 0px #0ABE35;
+    }
+    14% {
+        box-shadow: 0 0 40px #0ABE35;    
+        transform: scale(105%);    
+    }
+    28% {
+        box-shadow: 0 0 15px #0ABE35;   
+        transform: scale(100%);     
+    }
+    42% {
+        box-shadow: 0 0 30px #0ABE35;        
+    }
+    56% {
+        box-shadow: 0 0 15px #0ABE35;        
+    }
+    70% {
+        box-shadow: 0 0 30px #0ABE35;        
+    }
+    84% {
+        box-shadow: 0 0 15px #0ABE35;        
+    }
+    100% {
+        box-shadow: 0 0 30px #0ABE35;        
+    }
+}
+
+@keyframes fog {
+    0% {
+        opacity: 0;
+    }      
+
+    100% {
+        opacity: 1;
+    }
+}
